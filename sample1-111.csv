@@ -1,0 +1,1187 @@
+Article 4:
+
+Title: Survival of endospores of Bacillus subtilis on spacecraft surfaces under simulated martian environments: implications for the forward contamination of Mars.
+
+<justification>
+This study focuses on bacterial survival on spacecraft surfaces, not human medical conditions.
+</justification>
+
+
+<decision>EXCLUDE</decision>
+
+Article 5:
+
+Title: Human Performance of Novice Schedulers for Complex Spaceflight Operations Timelines.
+
+<justification>
+This study investigates the scheduling performance of novice schedulers, who may not be representative of commercial spaceflight participants. It is not clear if the participants meet the criteria of not meeting professional astronaut standards.
+</justification>
+
+
+<decision>MAYBE</decision>
+
+Article 6:
+
+Title: A Multi-UAV Task Allocation Algorithm Combatting Red Palm Weevil Infestation
+
+<justification>
+This study focuses on a UAV task allocation algorithm for combating a pest infestation, which is not related to human medical conditions or spaceflight.
+</justification>
+
+
+<decision>EXCLUDE</decision>
+
+Article 7:
+
+Title: "From Classical Radiation to Modern Radiation: Past, Present, and Future of Radiation Mutation Breeding"
+
+<justification>
+This study focuses on radiation mutation breeding in crops, and not human medical conditions relevant to spaceflight.
+</justification>
+
+
+<decision>EXCLUDE</decision>
+
+Article 8:
+
+Title: "Effect of Green Space Environment on Air Pollutants PM2.5, PM10, CO, O3, and Incidence and Mortality of SARS-CoV-2 in Highly Green and Less-Green Countries."
+
+<justification>
+This study examines the effects of green space environments on air pollutants and COVID-19 incidence and mortality, which are not directly related to spaceflight or its specific health risks.
+</justification>
+
+
+<decision>EXCLUDE</decision>
+
+Article 9:
+
+Title: Neural Networks Enhanced Optimal Admittance Control of Robot-Environment Interaction Using Reinforcement Learning
+
+<justification>
+This study focuses on robot control algorithms and does not involve human participants or spaceflight-related medical conditions.
+</justification>
+
+
+<decision>EXCLUDE</decision>
+
+Article 10:
+
+Title: "Unmanned Aerial Vehicles in Smart Agriculture: Applications, Requirements, and Challenges"
+
+<justification>
+This article discusses the use of UAVs in agriculture, which is not related to spaceflight or human health in a spaceflight context.
+</justification>
+
+
+<decision>EXCLUDE</decision>
+
+Article 11:
+
+Title: Human-Machine Interface: Multiclass Classification by Machine Learning on 1D EOG Signals for the Control of an Omnidirectional Robot
+
+<justification>
+This study develops a human-machine interface for controlling robots using eye movements, and doesn't investigate the effects of spaceflight or its related conditions on the participants.
+</justification>
+
+
+<decision>EXCLUDE</decision>
+
+Article 12:
+
+Title: Future opportunities for life science programs in space.
+
+<justification>
+This article reviews future opportunities for life science research in space, which aligns with the scope of the review. It explicitly mentions research topics related to astronaut health.
+</justification>
+
+
+<decision>INCLUDE</decision>
+
+Article 13:
+
+Title: Optimizing mitochondrial maintenance in extended neuronal projections
+
+<justification>
+This study presents a model of neuronal mitochondrial maintenance, which is relevant to the potential neurological effects of spaceflight. It could be applicable to astronaut health.
+</justification>
+
+
+<decision>MAYBE</decision>
+
+Article 14:
+
+Title: Comprehensive analyses of plant hormones in etiolated pea and maize seedlings grown under microgravity conditions in space: Relevance to the International Space Station experiment “Auxin Transport”
+
+<justification>
+While this study investigates plant hormone responses to microgravity, it does not focus on human medical conditions related to spaceflight.
+</justification>
+
+
+<decision>EXCLUDE</decision>
+
+Article 15:
+
+Title: Core-shell protein clusters comprising haemoglobin and recombinant feline serum albumin as an artificial O<sub>2</sub> carrier for cats
+
+<justification>
+This study focuses on developing an artificial oxygen carrier for cats, which is not relevant to human medical conditions related to spaceflight.
+</justification>
+
+
+<decision>EXCLUDE</decision>
+
+Article 16:
+
+Title: Procedures for chemical fixation in immunohistochemical analyses of PIN proteins regulating polar auxin transport: Relevance to spaceflight experiments.
+
+<justification>
+This article outlines procedures for analyzing plant proteins relevant to spaceflight experiments but does not directly address human medical conditions.
+</justification>
+
+
+<decision>EXCLUDE</decision>
+
+Article 17:
+
+Title: Permanent phenotypic and genotypic changes of prostate cancer cells cultured in a three-dimensional rotating-wall vessel
+
+<justification>
+This study is an in-vitro study using cancer cell lines, not human participants, and focuses on general changes in a microgravity environment, not specific to spaceflight.
+</justification>
+
+
+<decision>EXCLUDE</decision>
+
+Article 18:
+
+Title: Recurrent isolation of hydrogen peroxide-resistant spores of Bacillus pumilus from a spacecraft assembly facility.
+
+<justification>
+This study examines bacterial spores' resistance to hydrogen peroxide in a spacecraft assembly facility, not human medical conditions in spaceflight.
+</justification>
+
+
+<decision>EXCLUDE</decision>
+
+Article 19:
+
+Title: A COVID-19 Emergency Response for Remote Control of a Dialysis Machine with Mobile HRI.
+
+<justification>
+This article describes a system for remote control of a dialysis machine, relevant to telehealth during pandemics but not directly related to spaceflight medical conditions.
+</justification>
+
+
+<decision>EXCLUDE</decision>
+
+Article 20:
+
+Title: Morphological and gene expression pattern changes in wrky46 mutant Arabidopsis thaliana under altered gravity conditions
+
+<justification>
+This study utilizes plant models (Arabidopsis thaliana), not human participants, to investigate responses to altered gravity conditions.
+</justification>
+
+
+<decision>EXCLUDE</decision>
+
+Article 21:
+
+Title: Adaptive Neural Network Sliding Mode Control for Quad Tilt Rotor Aircraft
+
+<justification>
+This study focuses on aircraft control systems, not human medical conditions in spaceflight.
+</justification>
+
+
+<decision>EXCLUDE</decision>
+
+Article 22:
+
+Title: Radiation Response of Murine Embryonic Stem Cells
+
+<justification>
+This study utilizes murine embryonic stem cells, not human participants, to investigate the effects of radiation.
+</justification>
+
+
+<decision>EXCLUDE</decision>
+
+Article 23:
+
+Title: Human exposure to space radiation: Role of primary and secondary particles
+
+<justification>
+This study examines the effects of space radiation on human organs, using computer models, and directly addresses a major health concern for astronauts.
+</justification>
+
+
+<decision>INCLUDE</decision>
+
+Article 24:
+
+Title: Methyltransferase Setdb1 Promotes Osteoblast Proliferation by Epigenetically Silencing Macrod2 with the Assistance of Atf7ip.
+
+<justification>
+This study investigates the mechanisms behind bone loss in the context of spaceflight and prolonged mechanical unloading. This is relevant to the inclusion criteria.
+</justification>
+
+
+<decision>INCLUDE</decision>
+
+Article 25:
+
+Title: Analysis of genetic variation in Ganoderma lucidum after space flight.
+
+<justification>
+This study focuses on genetic changes in a fungus (Ganoderma lucidum) after spaceflight, not human medical conditions.
+</justification>
+
+
+<decision>EXCLUDE</decision>
+
+Article 26:
+
+Title: UAV Remote Sensing for Campus Monitoring: A Comparative Evaluation of Nearest Neighbor and Rule-Based Classification
+
+<justification>
+This article focuses on using UAVs for campus monitoring, which is not related to spaceflight or human health in a spaceflight context.
+</justification>
+
+
+<decision>EXCLUDE</decision>
+
+Article 27:
+
+Title: Satellite-to-ground quantum key distribution.
+
+<justification>
+This study focuses on a communication technology (quantum key distribution), not human medical conditions in spaceflight.
+</justification>
+
+
+<decision>EXCLUDE</decision>
+
+Article 28:
+
+Title: Telepresence Robot System for People with Speech or Mobility Disabilities
+
+<justification>
+This study develops a telepresence robot system for people with disabilities, which is not directly related to human medical conditions specific to spaceflight.
+</justification>
+
+
+<decision>EXCLUDE</decision>
+
+Article 29:
+
+Title: "Differential proteomic analysis using isotope-coded protein-labeling strategies: Comparison, improvements and application to simulated microgravity effect on Cupriavidus metallidurans CH34"
+
+<justification>
+This study focuses on proteomic analysis of bacteria under simulated microgravity, not human medical conditions related to spaceflight.
+</justification>
+
+
+<decision>EXCLUDE</decision>
+
+Article 30:
+
+Title: Autonomous Heading Planning and Control Method of Unmanned Underwater Vehicles for Tunnel Detection
+
+<justification>
+This article focuses on underwater vehicle navigation, which is not related to human health or spaceflight.
+</justification>
+
+
+<decision>EXCLUDE</decision>
+
+Article 31:
+
+Title: MiR-655-3p inhibits the progression of osteoporosis by targeting LSD1 and activating BMP-2/Smad signaling pathway.
+
+<justification>
+This study investigates the role of a microRNA in osteoporosis, a condition relevant to bone loss during spaceflight. It uses a simulated microgravity model, which fits the inclusion criteria.
+</justification>
+
+
+<decision>INCLUDE</decision>
+
+Article 32:
+
+Title: Model for radial dependence of frequency distributions for energy imparted in nanometer volumes from HZE particles.
+
+<justification>
+This study develops a model for radiation energy deposition in small volumes, relevant to radiation risk assessment for astronauts.
+</justification>
+
+
+<decision>MAYBE</decision>
+
+Article 33:
+
+Title: "Recovery of resources for advanced life support space applications: effect of retention time on biodegradation of two crop residues in a fed-batch, continuous stirred tank reactor."
+
+<justification>
+This article examines biodegradation in bioreactors for advanced life support systems, which is relevant to long-duration space missions but does not directly involve human medical conditions.
+</justification>
+
+
+<decision>EXCLUDE</decision>
+
+Article 34:
+
+Title: A comparison of quality factors and weighting factors for characterizing astronaut radiation exposures.
+
+<justification>
+This article directly addresses methods for characterizing astronaut radiation exposures, which is critical for understanding radiation risk and developing mitigation strategies.
+</justification>
+
+
+<decision>INCLUDE</decision>
+
+Article 35:
+
+Title: Role of the MAPK pathway in the observed bystander effect in lymphocytes co-cultured with macrophages irradiated with gamma-rays or carbon ions.
+
+<justification>
+This study investigates radiation-induced bystander effects, which are relevant to understanding the biological impacts of space radiation on human cells.
+</justification>
+
+
+<decision>MAYBE</decision>
+
+Article 36:
+
+Title: Multifunctional metasails for self-stabilized beam-riding and optical communication.
+
+<justification>
+This study focuses on technology for spacecraft propulsion and communication, and does not involve human medical conditions.
+</justification>
+
+
+<decision>EXCLUDE</decision>
+
+Article 37:
+
+Title: GA Based Adaptive Singularity-Robust Path Planning of Space Robot for On-Orbit Detection
+
+<justification>
+This article describes a path planning method for space robots, not human medical conditions in spaceflight.
+</justification>
+
+
+<decision>EXCLUDE</decision>
+
+Article 38:
+
+Title: Potential Involvement of the Ocular Glymphatic System in Optic Disc Edema in Astronauts.
+
+<justification>
+This article discusses a potential mechanism for optic disc edema, a known spaceflight-associated medical condition. It aligns directly with the scope of the review.
+</justification>
+
+
+<decision>INCLUDE</decision>
+
+Article 39:
+
+Title: Environmental Data and Survival Data of Deinococcus aetherius from the Exposure Facility of the Japan Experimental Module of the International Space Station Obtained by the Tanpopo Mission.
+
+<justification>
+This study focuses on bacterial survival in space, not human medical conditions.
+</justification>
+
+
+<decision>EXCLUDE</decision>
+
+Article 40:
+
+Title: Current problems of space cardiology
+
+<justification>
+This article reviews the development and current challenges in space cardiology, which aligns directly with the scope of the review and addresses human medical conditions related to spaceflight.
+</justification>
+
+
+<decision>INCLUDE</decision>
+
+Article 41:
+
+Title: Obstacle effects on electrocommunication with applications to object detection of underwater robots
+
+<justification>
+This article describes an underwater object detection method using electrocommunication, which is not directly related to spaceflight medical conditions.
+</justification>
+
+
+<decision>EXCLUDE</decision>
+
+Article 42:
+
+Title: Design and Implementation of an ML and IoT Based Adaptive Traffic-Management System for Smart Cities
+
+<justification>
+This article describes a traffic management system for smart cities, not related to spaceflight or astronaut health.
+</justification>
+
+
+<decision>EXCLUDE</decision>
+
+Article 43:
+
+Title: Growth Hormone Levels After Flywheel Ergometer Exercise: Correlation with Independent Variables
+
+<justification>
+This article examines the relationship between exercise variables and growth hormone levels, potentially relevant to counteracting muscle loss during spaceflight. It involves human subjects and a device designed for spaceflight exercise.
+</justification>
+
+
+<decision>MAYBE</decision>
+
+Article 44:
+
+Title: Reductions in circulating endocannabinoid 2-arachidonoylglycerol levels in healthy human subjects exposed to chronic stressors
+
+<justification>
+This study examines the impact of chronic stress on endocannabinoid levels in humans, specifically mentioning relevance to spaceflight and using a Mars simulation study. This aligns with the scope of the review.
+</justification>
+
+
+<decision>INCLUDE</decision>
+
+Article 45:
+
+Title: Morphologic Characteristics and Proliferation of Rabbit Corneal Stromal Cells Onto Complexes of Collagen-Chitosan-Sodium Hyaluronate Under Simulated Microgravity
+
+<justification>
+This study uses rabbit cells, not human participants, to investigate the effects of simulated microgravity.
+</justification>
+
+
+<decision>EXCLUDE</decision>
+
+Article 46:
+
+Title: Outer space mobilities and human health
+
+<justification>
+This article discusses health risks associated with space travel and tourism, including microgravity, radiation, and contamination, which align directly with the scope of the review.
+</justification>
+
+
+<decision>INCLUDE</decision>
+
+Article 47:
+
+Title: An Invertible Mathematical Model of Cortical Bone's Adaptation to Mechanical Loading
+
+<justification>
+This article presents a model of bone adaptation to mechanical loading, relevant to bone loss during spaceflight. It specifically mentions spaceflight and bed rest as applications.
+</justification>
+
+
+<decision>MAYBE</decision>
+
+Article 48:
+
+Title: Neurophysiology of space travel: energetic solar particles cause cell type-specific plasticity of neurotransmission
+
+<justification>
+This article investigates the long-term effects of space radiation on neurotransmission in mice. While it uses an animal model, the findings are relevant to understanding potential cognitive impacts of spaceflight on humans.
+</justification>
+
+
+<decision>MAYBE</decision>
+
+Article 49:
+
+Title: Echographic examination in isolated sites controlled from an expert center using a 2-D echograph guided by a teleoperated robotic arm.
+
+<justification>
+This article focuses on a teleoperated ultrasound system, potentially relevant to remote healthcare in space but not directly investigating spaceflight-specific medical conditions.
+</justification>
+
+
+<decision>MAYBE</decision>
+
+Article 50:
+
+Title: The Iterative Learning Gain That Optimizes Real-Time Torque Tracking for Ankle Exoskeletons in Human Walking Under Gait Variations
+
+<justification>
+This study focuses on improving ankle exoskeleton control for gait assistance, which may have applications for astronaut rehabilitation but does not directly address spaceflight-related medical conditions.
+</justification>
+
+
+<decision>EXCLUDE</decision>
+
+Article 51:
+
+Title: Microgravity as a novel environmental signal affecting Salmonella enterica serovar Typhimurium virulence
+
+<justification>
+This study investigates the effects of simulated microgravity on bacterial virulence in mice. While relevant to infection risk during spaceflight, it does not directly involve human medical conditions.
+</justification>
+
+
+<decision>EXCLUDE</decision>
+
+Article 52:
+
+Title: "PIEZO1, sensing the touch during erythropoiesis"
+
+<justification>
+This article reviews the role of the PIEZO1 protein in red blood cell production, which is a general hematological process not specific to spaceflight.
+</justification>
+
+
+<decision>EXCLUDE</decision>
+
+Article 53:
+
+Title: Modeling and Analysis of RFI Impacts on Imaging between Geosynchronous SAR and Low Earth Orbit SAR
+
+<justification>
+This article focuses on interference between satellite radar systems, not human medical conditions.
+</justification>
+
+
+<decision>EXCLUDE</decision>
+
+Article 54:
+
+Title: A 5G Beam Selection Machine Learning Algorithm for Unmanned Aerial Vehicle Applications
+
+<justification>
+This article focuses on communication technology for UAVs, not human health or spaceflight.
+</justification>
+
+
+<decision>EXCLUDE</decision>
+
+Article 55:
+
+Title: Dual-quaternion based fault-tolerant control for spacecraft formation flying with finite-time convergence.
+
+<justification>
+This article describes a control system for spacecraft formation flying, not human medical conditions related to spaceflight.
+</justification>
+
+
+<decision>EXCLUDE</decision>
+
+Article 56:
+
+Title: A closed-loop brain-computer interface with augmented reality feedback for industrial human-robot collaboration
+
+<justification>
+This article focuses on a brain-computer interface for human-robot collaboration in industrial settings, not specifically related to spaceflight or its medical challenges.
+</justification>
+
+
+<decision>EXCLUDE</decision>
+
+Article 57:
+
+Title: "Ubiquitous UAVs: A Cloud Based Framework for Storing, Accessing and Processing Huge Amount of Video Footage in an Efficient Way"
+
+<justification>
+This article describes a data management framework for UAV video footage, not related to spaceflight or astronaut health.
+</justification>
+
+
+<decision>EXCLUDE</decision>
+
+Article 58:
+
+Title: A fully integrated protein crystallization platform for small-molecule drug discovery
+
+<justification>
+This article describes a protein crystallization platform for drug discovery, not specifically related to spaceflight or astronaut health.
+</justification>
+
+
+<decision>EXCLUDE</decision>
+
+Article 59:
+
+Title: Effects of High Glucose on Human Endothelial Cells Exposed to Simulated Microgravity.
+
+<justification>
+This article investigates the effects of high glucose and simulated microgravity on human endothelial cells, potentially relevant to understanding diabetic complications in a spaceflight context.
+</justification>
+
+
+<decision>MAYBE</decision>
+
+Article 60:
+
+Title: "Blood volume: importance and adaptations to exercise training, environmental stresses, and trauma/sickness."
+
+<justification>
+This review article discusses blood volume adaptations to various stressors, including microgravity. It explicitly mentions relevance to orthostatic intolerance and decreased exercise capacity in astronauts.
+</justification>
+
+
+<decision>INCLUDE</decision>
+
+Article 61:
+
+Title: Towards Real-Time Service from Remote Sensing: Compression of Earth Observatory Video Data via Long-Term Background Referencing
+
+<justification>
+This article focuses on data compression techniques for Earth observation videos, not human medical conditions related to spaceflight.
+</justification>
+
+
+<decision>EXCLUDE</decision>
+
+Article 62:
+
+Title: Clinorotation upregulates inducible nitric oxide synthase by inhibiting AP-1 activation in human umbilical vein endothelial cells.
+
+<justification>
+This study investigates the effects of simulated microgravity (clinorotation) on nitric oxide synthase in human endothelial cells, which could be relevant to vascular changes during spaceflight.
+</justification>
+
+
+<decision>MAYBE</decision>
+
+Article 63:
+
+Title: The Vestibular System: A Newly Identified Regulator of Bone Homeostasis Acting Through the Sympathetic Nervous System
+
+<justification>
+This review article discusses the role of the vestibular system in bone health, mentioning relevance to spaceflight-induced bone loss.
+</justification>
+
+
+<decision>INCLUDE</decision>
+
+Article 64:
+
+Title: Modeled microgravity inhibits apoptosis in peripheral blood lymphocytes.
+
+<justification>
+This study investigates the effects of simulated microgravity on apoptosis in human lymphocytes, relevant to understanding immune system changes during spaceflight.
+</justification>
+
+
+<decision>INCLUDE</decision>
+
+Article 65:
+
+Title: A Shift from Efficiency to Adaptability: Recent Progress in Biomimetic Interactive Soft Robotics in Wet Environments
+
+<justification>
+This article reviews developments in soft robotics for wet environments. While potentially applicable to future space exploration technologies, it doesn't directly address human medical conditions.
+</justification>
+
+
+<decision>EXCLUDE</decision>
+
+Article 66:
+
+Title: Distinct Motor Plans Form and Retrieve Distinct Motor Memories for Physically Identical Movements
+
+<justification>
+This study investigates motor learning and memory in humans, with potential relevance to adapting to altered gravity environments during spaceflight.
+</justification>
+
+
+<decision>MAYBE</decision>
+
+Article 67:
+
+Title: Respiratory pathology in vibroacoustic disease: 25 years of research.
+
+<justification>
+This article focuses on respiratory pathology associated with noise exposure, not specifically related to spaceflight environments.
+</justification>
+
+
+<decision>EXCLUDE</decision>
+
+Article 68:
+
+Title: The impact of space flight on the human skeletal system and potential nutritional countermeasures.
+
+<justification>
+This review article directly addresses the issue of bone loss during spaceflight and explores potential nutritional countermeasures.
+</justification>
+
+
+<decision>INCLUDE</decision>
+
+Article 69:
+
+Title: Exposure to reduced gravity impairs junctional transmission at the semicircular canal in the frog labyrinth
+
+<justification>
+This study uses frog models, not human participants, to investigate the effects of reduced gravity on the vestibular system.
+</justification>
+
+
+<decision>EXCLUDE</decision>
+
+Article 70:
+
+Title: Biomechanics and energetics of walking in powered ankle exoskeletons using myoelectric control versus mechanically intrinsic control
+
+<justification>
+This article investigates the use of ankle exoskeletons for gait assistance, potentially relevant to astronaut rehabilitation but not directly addressing spaceflight-specific medical conditions.
+</justification>
+
+
+<decision>EXCLUDE</decision>
+
+Article 71:
+
+Title: Space Radiation-Induced Alterations in the Hippocampal Ubiquitin-Proteome System
+
+<justification>
+This study investigates the effects of simulated space radiation on the rat hippocampus, relevant to understanding potential cognitive impacts of spaceflight.
+</justification>
+
+
+<decision>MAYBE</decision>
+
+Article 72:
+
+Title: Microscopic Structure of Bayberry (Myrica Rubra Sieb. Et Zucc.) Juice Haze
+
+<justification>
+This article analyzes the microstructure of bayberry juice haze, which is not relevant to spaceflight or human health.
+</justification>
+
+
+<decision>EXCLUDE</decision>
+
+Article 73:
+
+Title: Development of a mobile robot-based combined sensor platform to determine the correlation between soil penetration resistance and electrical conductivity
+
+<justification>
+This article focuses on developing a robot for agricultural applications, not relevant to human health in spaceflight.
+</justification>
+
+
+<decision>EXCLUDE</decision>
+
+Article 74:
+
+Title: Bone formation is not impaired by hibernation (disuse) in black bears Ursus americanus
+
+<justification>
+This study investigates bone metabolism in hibernating bears as a potential model for understanding bone loss during spaceflight. While an animal study, it could provide insights into human bone health in microgravity.
+</justification>
+
+
+<decision>MAYBE</decision>
+
+Article 75:
+
+Title: Early changes in vasoreactivity after simulated microgravity are due to an upregulation of the endothelium-dependent nitric oxide/cGMP pathway
+
+<justification>
+This study investigates vascular changes in rats after simulated microgravity, which is directly relevant to understanding cardiovascular adaptation during spaceflight.
+</justification>
+
+
+<decision>INCLUDE</decision>
+
+Article 76:
+
+Title: Whole-Body Proton Irradiation Causes Long-Term Damage to Hematopoietic Stem Cells in Mice
+
+<justification>
+This study investigates the effects of proton radiation on hematopoietic stem cells in mice. While an animal study, the findings are relevant to understanding radiation risks for astronauts.
+</justification>
+
+
+<decision>MAYBE</decision>
+
+Article 77:
+
+Title: Proteomic and Metabolomic Characteristics of Extremophilic Fungi Under Simulated Mars Conditions
+
+<justification>
+This study examines fungal responses to simulated Mars conditions, not directly focusing on human medical conditions.
+</justification>
+
+
+<decision>EXCLUDE</decision>
+
+Article 78:
+
+Title: Multi-Target Tracking in Multi-Static Networks with Autonomous Underwater Vehicles Using a Robust Multi-Sensor Labeled Multi-Bernoulli Filter
+
+<justification>
+This article focuses on underwater target tracking using autonomous vehicles, not relevant to human health or spaceflight.
+</justification>
+
+
+<decision>EXCLUDE</decision>
+
+Article 79:
+
+Title: "New scientific equipment for protein crystallization in microgravity, BELKA, and its approbation on the Bion-M No. 1 spacecraft"
+
+<justification>
+This article describes equipment for protein crystallization in microgravity, not directly focusing on human medical conditions.
+</justification>
+
+
+<decision>EXCLUDE</decision>
+
+Article 80:
+
+Title: Simulated Microgravity Alters P-Glycoprotein Efflux Function and Expression via the Wnt/β-Catenin Signaling Pathway in Rat Intestine and Brain
+
+<justification>
+This study investigates the effects of simulated microgravity on drug transporter function in rats, relevant to understanding pharmacokinetics and drug efficacy during spaceflight.
+</justification>
+
+
+<decision>MAYBE</decision>
+
+Article 81:
+
+Title: Arm locking using laser frequency comb.
+
+<justification>
+This article describes a technique for laser stabilization in space-based gravitational wave detectors, not human medical conditions.
+</justification>
+
+
+<decision>EXCLUDE</decision>
+
+Article 82:
+
+Title: "Changes in the Surface Expression of Intercellular Adhesion Molecule 3, the Induction of Apoptosis, and the Inhibition of Cell-Cycle Progression of Human Multidrug-Resistant Jurkat/A4 Cells Exposed to a Random Positioning Machine."
+
+<justification>
+This study investigates the effects of simulated microgravity on human leukemia cells, relevant to understanding potential changes in immune function and cancer development during spaceflight.
+</justification>
+
+
+<decision>MAYBE</decision>
+
+Article 83:
+
+Title: Dissipative Kerr solitons in optical microresonators
+
+<justification>
+This article discusses a specific type of laser technology with potential applications in various fields, including space, but it does not focus on human medical conditions.
+</justification>
+
+
+<decision>EXCLUDE</decision>
+
+Article 84:
+
+Title: "Regional climate-driven C<sub>3</sub> and C<sub>4</sub> plant variation in the Cheollipo area, Korea, during the late Pleistocene"
+
+<justification>
+This article investigates past climate change and plant responses, not relevant to human health or spaceflight.
+</justification>
+
+
+<decision>EXCLUDE</decision>
+
+Article 85:
+
+Title: On the Way to Mars-Flagellated Algae in Bioregenerative Life Support Systems Under Microgravity Conditions
+
+<justification>
+This article explores the use of algae in bioregenerative life support systems for space missions, relevant to long-duration spaceflight but not directly focusing on human medical conditions.
+</justification>
+
+
+<decision>EXCLUDE</decision>
+
+Article 86:
+
+Title: Advances in Reconfigurable Vectorial Thrusters for Adaptive Underwater Robots
+
+<justification>
+This article focuses on underwater robot technology, not human health or spaceflight.
+</justification>
+
+
+<decision>EXCLUDE</decision>
+
+Article 87:
+
+Title: The effect of simulated space radiation on the N-glycosylation of human immunoglobulin G1.
+
+<justification>
+This study investigates the effects of simulated space radiation on a specific protein in humans, relevant to understanding potential immune system changes during spaceflight.
+</justification>
+
+
+<decision>INCLUDE</decision>
+
+Article 88:
+
+Title: A pilot project to detect and forecast harmful algal blooms in the northern Gulf of Mexico.
+
+<justification>
+This article describes a project for monitoring harmful algal blooms, not relevant to spaceflight or astronaut health.
+</justification>
+
+
+<decision>EXCLUDE</decision>
+
+Article 89:
+
+Title: Adaptive Selective Learning for automatic identification of sub-kilometer craters
+
+<justification>
+This article presents a crater detection algorithm for planetary science, not related to human medical conditions.
+</justification>
+
+
+<decision>EXCLUDE</decision>
+
+Article 90:
+
+Title: Direct Writing of a Titania Foam in Microgravity for Photocatalytic Applications
+
+<justification>
+This article explores the use of additive manufacturing in microgravity for creating photocatalytic materials. While potentially relevant to future space technologies, it does not directly address human medical conditions.
+</justification>
+
+
+<decision>EXCLUDE</decision>
+
+Article 91:
+
+Title: Understanding our Celestial Neighbors: An Indian Perspective in Planetary Sciences and Exploration
+
+<justification>
+This article describes planetary exploration programs and findings. While relevant to space exploration, it doesn't focus on human medical conditions related to spaceflight.
+</justification>
+
+
+<decision>EXCLUDE</decision>
+
+Article 92:
+
+Title: Bacterial Growth in Saturated and Eutectic Solutions of Magnesium Sulphate and Potassium Chlorate with Relevance to Mars and the Ocean Worlds.
+
+<justification>
+This study focuses on bacterial growth in extreme environments, relevant to astrobiology but not directly focusing on human medical conditions.
+</justification>
+
+
+<decision>EXCLUDE</decision>
+
+Article 93:
+
+Title: AUV-Based Side-Scan Sonar Real-Time Method for Underwater-Target Detection
+
+<justification>
+This article focuses on underwater target detection using autonomous vehicles, not relevant to human health or spaceflight.
+</justification>
+
+
+<decision>EXCLUDE</decision>
+
+Article 94:
+
+Title: Simulated microgravity inhibits cell focal adhesions leading to reduced melanoma cell proliferation and metastasis via FAK/RhoA-regulated mTORC1 and AMPK pathways
+
+<justification>
+This study investigates the effects of simulated microgravity on melanoma cells, potentially relevant to understanding cancer risks and treatment during spaceflight.
+</justification>
+
+
+<decision>MAYBE</decision>
+
+Article 95:
+
+Title: Sparse representation for infrared Dim target detection via a discriminative over-complete dictionary learned online.
+
+<justification>
+This article describes an infrared target detection method, not relevant to human health or spaceflight.
+</justification>
+
+
+<decision>EXCLUDE</decision>
+
+Article 96:
+
+Title: Effect of modeled microgravity on radiation-induced adaptive response of root growth in Arabidopsis thaliana
+
+<justification>
+This study investigates the interaction of simulated microgravity and radiation on plants, not human medical conditions.
+</justification>
+
+
+<decision>EXCLUDE</decision>
+
+Article 97:
+
+Title: Four men in a space station - To say nothing of the cow! The quest for finding respite and work in the ultimate frontier
+
+<justification>
+This article appears to be a humorous take on spaceflight challenges, not a serious scientific study relevant to the review.
+</justification>
+
+
+<decision>EXCLUDE</decision>
+
+Article 98:
+
+Title: Cooling to Facilitate Metabolic Suppression in Healthy Individuals
+
+<justification>
+This study evaluates a method for cooling individuals to suppress metabolism, potentially relevant to emergency situations during spaceflight. It involves human subjects and explicitly mentions application to astronaut endurance.
+</justification>
+
+
+<decision>MAYBE</decision>
+
+Article 99:
+
+Title: Evidence of avian-mediated long distance dispersal in American tardigrades.
+
+<justification>
+This article investigates tardigrade dispersal methods, not human medical conditions related to spaceflight.
+</justification>
+
+
+<decision>EXCLUDE</decision>
+
+Article 100:
+
+Title: Survival of Antarctic Cryptoendolithic Fungi in Simulated Martian Conditions On Board the International Space Station.
+
+<justification>
+This study examines fungal survival in simulated Martian conditions, relevant to astrobiology but not directly focusing on human health.
+</justification>
+
+
+<decision>EXCLUDE</decision>
+
+Article 101:
+
+Title: Detection of silica-rich deposits on Mars.
+
+<justification>
+This article reports on geological findings on Mars, not relevant to human health or spaceflight medical conditions.
+</justification>
+
+
+<decision>EXCLUDE</decision>
+
+Article 102:
+
+Title: Response of the mouse sublingual gland to spaceflight.
+
+<justification>
+This study investigates the effects of spaceflight on salivary glands in mice. While an animal study, the findings might provide insights into physiological changes in humans during spaceflight.
+</justification>
+
+
+<decision>MAYBE</decision>
+
+Article 103:
+
+Title: "Development of an OspC-based tetravalent, recombinant, chimeric vaccinogen that elicits bactericidal antibody against diverse Lyme disease spirochete strains"
+
+<justification>
+This study focuses on vaccine development for Lyme disease, not human health concerns specific to spaceflight.
+</justification>
+
+
+<decision>EXCLUDE</decision>
+
+Article 104:
+
+Title: Exposure to modeled microgravity induces metabolic idleness in malignant human MCF-7 and normal murine VSMC cells.
+
+<justification>
+This study investigates the effects of simulated microgravity on human breast cancer cells and mouse vascular cells. It is relevant to understanding potential changes in cell behavior and disease progression in a spaceflight context.
+</justification>
+
+
+<decision>MAYBE</decision>
+
+Article 105:
+
+Title: Toward Autonomous Vehicles and Machinery in Mill Yards of the Forest Industry: Technologies and Proposals for Autonomous Vehicle Operations
+
+<justification>
+This article discusses autonomous vehicle technology for the forest industry, not human health or spaceflight.
+</justification>
+
+
+<decision>EXCLUDE</decision>
+
+Article 106:
+
+Title: Microarray analysis of genes differentially expressed in HepG2 cells cultured in simulated microgravity: preliminary report.
+
+<justification>
+This study investigates the effects of simulated microgravity on gene expression in human liver cells, potentially relevant to understanding physiological changes during spaceflight.
+</justification>
+
+
+<decision>MAYBE</decision>
+
+Article 107:
+
+Title: Design of an interval type-2 fuzzy neural network sliding mode robust controller for higher stability of magnetic spacecraft attitude control.
+
+<justification>
+This article describes a control system for spacecraft attitude control, not human medical conditions related to spaceflight.
+</justification>
+
+
+<decision>EXCLUDE</decision>
+
+Article 108:
+
+Title: Tracking Control for Mobile Robots Considering the Dynamics of All Their Subsystems: Experimental Implementation
+
+<justification>
+This article focuses on robot control systems, not human medical conditions in spaceflight.
+</justification>
+
+
+<decision>EXCLUDE</decision>
+
+Article 109:
+
+Title: "A novel, population-based approach to astronaut radiation risk assessment"
+
+<justification>
+This article directly addresses a key inclusion criterion: it presents a new method for assessing radiation risk in astronauts, specifically considering age and sex distributions.
+</justification>
+
+
+<decision>INCLUDE</decision>
+
+Article 110:
+
+Title: Extremotolerance and Resistance of Lichens: Comparative Studies on Five Species Used in Astrobiological Research I. Morphological and Anatomical Characteristics
+
+<justification>
+This study examines the resistance of lichens to extreme conditions, relevant to astrobiology but not directly focusing on human medical conditions.
+</justification>
+
+
+<decision>EXCLUDE</decision>
+
+Article 111:
+
+Title: Analysis of the Relationship between Age and Violation of Traffic Laws and Ordinances in Traffic Accidents on Children
+
+<justification>
+This article analyzes traffic accidents involving children, not relevant to spaceflight or astronaut health.
+</justification>
+
+
+<decision

@@ -1,0 +1,23 @@
+Reviewer A,Reviewer B,"A Yes, B Yes","A Yes, B No","A No, B Yes","A No, B No",Proportionate Agreement,Yes Probability,No Probability,Random Agreement Probability,Cohen's Kappa
+Jonathan Szeto,Krishi Korrapati,2,44,52,777,0.89029,0.00324,0.88896,0.8922,-0.01779
+Jonathan Szeto,Satyam Patel,16,11,14,92,0.81203,0.04579,0.61722,0.66301,0.44221
+Jonathan Szeto,Rosirene Gesinger,0,1,4,103,0.9537,0.00034,0.95405,0.95439,-0.01504
+Krishi Korrapati,Samantha Moore,0,0,3,9,0.75,0.0,0.75,0.75,0.0
+Cooper Lytle,Jonathan Szeto,5,50,7,71,0.57143,0.03731,0.53355,0.57086,0.00132
+Jonathan Szeto,Tejal Gala,0,6,1,310,0.97792,0.00006,0.97798,0.97804,-0.00544
+Krishi Korrapati,Tejal Gala,0,0,0,72,1.0,0.0,1.0,1.0,NaN
+Krishi Korrapati,Stephen Kunkel,0,0,1,23,0.95833,0.0,0.95833,0.95833,0.0
+Krishi Korrapati,Rosirene Gesinger,0,0,0,7,1.0,0.0,1.0,1.0,NaN
+Jonathan Szeto,Samantha Moore,25,7,102,111,0.5551,0.06771,0.41873,0.48643,0.13371
+Samantha Moore,Tejal Gala,0,0,0,7,1.0,0.0,1.0,1.0,NaN
+Tejal Gala,Tejal Gala,0,0,0,19,1.0,0.0,1.0,1.0,NaN
+Jonathan Szeto,Stephen Kunkel,0,1,0,4,0.8,0.0,0.8,0.8,0.0
+Cooper Lytle,Krishi Korrapati,0,0,0,13,1.0,0.0,1.0,1.0,NaN
+Cooper Lytle,Stephen Kunkel,0,0,0,5,1.0,0.0,1.0,1.0,NaN
+Rosirene Gesinger,Satyam Patel,0,0,0,2,1.0,0.0,1.0,1.0,NaN
+Cooper Lytle,Satyam Patel,0,1,0,0,0.0,0.0,0.0,0.0,0.0
+Christopher Janssen,Rosirene Gesinger,0,0,0,1,1.0,0.0,1.0,1.0,NaN
+Rosirene Gesinger,Tejal Gala,0,0,0,6,1.0,0.0,1.0,1.0,NaN
+Satyam Patel,Tejal Gala,0,0,0,1,1.0,0.0,1.0,1.0,NaN
+Samantha Moore,Satyam Patel,0,1,0,0,0.0,0.0,0.0,0.0,0.0
+Stephen Kunkel,Tejal Gala,0,0,0,1,1.0,0.0,1.0,1.0,NaN
