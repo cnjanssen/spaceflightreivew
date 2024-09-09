@@ -1,0 +1,457 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[1]:
+
+
+import pandas as pd
+
+
+# In[2]:
+
+
+import os
+
+def get_api_key():
+    # Hardcoded path to the secrets directory
+    secrets_dir = '/Users/chrisjanssen/Insync/cnjanssen@tamu.edu/Google Drive/COM/Research/spaceflightreview-secrets'
+
+    # Construct the full path to the secrets.txt file
+    secret_file = os.path.join(secrets_dir, 'secrets.txt')
+
+    # Read the API key from the file
+    try:
+        with open(secret_file, 'r') as file:
+            api_key = file.read().strip()
+        return api_key
+    except FileNotFoundError:
+        print(f"Error: secrets.txt file not found in the secrets directory: {secrets_dir}")
+        return None
+    except IOError:
+        print(f"Error: Unable to read the secrets.txt file: {secret_file}")
+        return None
+
+# Use the function to get the API key
+anthropic_api_key = get_api_key()
+
+if anthropic_api_key:
+    print("API key successfully loaded.")
+    # Use the API key in your code
+    # For example: anthropic.api_key = anthropic_api_key
+else:
+    print("Failed to load API key.")
+
+
+# In[3]:
+
+
+#df = pd.read_csv('all_abstracts_screen.csv')
+df = pd.read_parquet('pending_abstracts_pt3.parquet')
+
+
+# In[4]:
+
+
+#filter based on obvious exclusion criteria
+df = df.drop(columns='AI_Decision')
+
+
+# In[5]:
+
+
+df.columns
+
+
+# In[6]:
+
+
+df = df.reset_index(drop=True)
+
+
+# In[6]:
+
+
+df
+
+
+# In[ ]:
+
+
+import anthropic
+import os
+import pandas as pd
+import time
+import matplotlib.pyplot as plt
+from tqdm import tqdm
+from functools import lru_cache
+import json
+
+# Set up the API key for Claude.AI
+os.environ['ANTHROPIC_API_KEY'] = anthropic_api_key
+
+# Initialize the Anthropic client
+client = anthropic.Anthropic()
+
+# Cache the prompt
+@lru_cache(maxsize=1)
+def get_cached_prompt():
+    return """You are assisting in screening articles for a scoping review on medical screening for Commercial Spaceflight (CSF). Your task is to determine whether to include, exclude, or mark as "maybe" each article based on the provided criteria. 
+
+Here are the key inclusion criteria:
+- Timeframe: 2000-2023
+- Setting: Spaceflight experience/profile and/or analogues/simulation (e.g., suborbital, orbital, lunar, planetary, trans-atmospheric, parabolic, centrifuge, bed rest, dry immersion, head-down tilt)
+- Human medical conditions related to CSF
+- Language: English in full text
+- Sample: Adult human participants (18 years and older) but who are commercial spaceflight participants or passengers who DO NOT meet career professional astronaut medical standards and training and who DOES NOT HAVE primary duties with operation or safety of flgiht of aircraft
+- Peer-reviewed articles relevant to Commercial Spaceflight
+- NASA RIDGE hazards of space flight such as 
+--Radiation
+--Isolation and confinement
+--Distance from Earth
+--Gravity (differing gravitational fields)
+--Environment (hostile/closed)
+
+Key exclusion criteria:
+- Animal, in-silico, or in-vitro studies
+- Pediatrics or age less than 18 years
+- Full text not available in English
+- Articles limited to professional astronauts or equivalent
+- Gray literature, dissertations, theses, technical reports, proprietary information
+- Editorials, magazine articles, or web-based/digital media
+- Textbooks
+
+Please review the following article information:
+
+Title: <article_title>{{Title}}</article_title>
+
+Year: <article_year>{{Published_Year}}</article_year>
+
+Abstract: <article_abstract>{{Abstract}}</article_abstract>
+
+Based on this information, determine whether the article should be included, excluded, or marked as "maybe" for the scoping review. Consider the inclusion and exclusion criteria carefully.
+
+First, provide a brief justification for your decision, explaining how the article meets or fails to meet the criteria. Then, state your decision.
+
+Format your response as follows:
+<justification>
+[Your justification here]
+</justification>
+
+<decision>[INCLUDE/EXCLUDE/MAYBE]</decision>"""
+
+import anthropic
+import os
+import pandas as pd
+import time
+import matplotlib.pyplot as plt
+from tqdm import tqdm
+from functools import lru_cache
+import json
+import logging
+
+# Set up logging
+logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
+
+
+
+# Initial token count and limit
+running_token_count = 0
+TOKEN_LIMIT = 40000
+last_reset_time = time.time()
+
+# Function to estimate tokens (simplified)
+def estimate_tokens(text):
+    return len(str(text).split())
+
+def process_article_with_retry(title, year, abstract, max_retries=3):
+    for attempt in range(max_retries):
+        try:
+            logging.debug(f"Attempting to process article (Attempt {attempt + 1})")
+            return process_article(title, year, abstract)
+        except Exception as e:
+            logging.error(f"Attempt {attempt + 1} failed: {e}")
+            if attempt == max_retries - 1:
+                logging.warning(f"Max retries reached. Skipping article.")
+                return "Error", 0
+            time.sleep(2 ** attempt)  # Exponential backoff
+
+def process_article(title, year, abstract):
+    global running_token_count, last_reset_time
+
+    # Handle potential None values
+    title = str(title) if pd.notna(title) else ""
+    year = str(year) if pd.notna(year) else ""
+    abstract = str(abstract) if pd.notna(abstract) else ""
+
+    prompt = get_cached_prompt().replace("{{Title}}", title).replace("{{Published_Year}}", year).replace("{{Abstract}}", abstract)
+
+    tokens_used = estimate_tokens(prompt)
+    current_time = time.time()
+
+    # Check if a minute has passed since last reset
+    if current_time - last_reset_time >= 60:
+        logging.debug("Resetting token count")
+        running_token_count = 0
+        last_reset_time = current_time
+
+    # Check if adding these tokens would exceed the limit
+    if running_token_count + tokens_used > TOKEN_LIMIT:
+        sleep_time = 60 - (current_time - last_reset_time)
+        if sleep_time > 0:
+            logging.debug(f"Sleeping for {sleep_time} seconds to avoid rate limit")
+            time.sleep(sleep_time)
+        running_token_count = 0
+        last_reset_time = time.time()
+
+    running_token_count += tokens_used
+
+    # Call the Claude API
+    logging.debug("Calling Claude API")
+    message = client.messages.create(
+        model="claude-3-haiku-20240307",
+        max_tokens=3000,
+        temperature=0,
+        messages=[
+            {"role": "user", "content": prompt}
+        ]
+    )
+
+    return message.content, tokens_used
+
+# Process all articles in the dataframe
+def process_all_articles(df):
+    results = []
+    tokens_used_list = []
+    progress_bar = tqdm(total=len(df), desc="Processing Articles")
+
+    for i, row in df.iterrows():
+        try:
+            logging.info(f"Processing article {i+1}/{len(df)}")
+            result, tokens_used = process_article_with_retry(row['Title'], row['Published Year'], row['Abstract'])
+            results.append(str(result))
+            tokens_used_list.append(tokens_used)
+            logging.info(f"Successfully processed article {i+1}")
+        except Exception as e:
+            logging.error(f"Error processing row {i}: {e}")
+            results.append("Error")
+            tokens_used_list.append(0)
+
+        progress_bar.update(1)
+
+        if (i + 1) % 50 == 0:
+            logging.info(f"Checkpoint: Processed {i+1} articles")
+            logging.debug(f"Current results length: {len(results)}")
+            logging.debug(f"Current tokens_used_list length: {len(tokens_used_list)}")
+            save_intermediate_results(df.iloc[:i+1], results, tokens_used_list, i+1)
+
+        time.sleep(1)
+
+    progress_bar.close()
+
+    # Add results to the DataFrame
+    df['AI_Decision'] = results
+    df['Tokens_Used'] = tokens_used_list
+
+    return df
+
+def save_intermediate_results(df_slice, results, tokens_used_list, num_processed):
+    temp_df = df_slice.copy()
+    if len(results) != len(temp_df):
+        logging.warning(f"Mismatch in lengths. DataFrame: {len(temp_df)}, Results: {len(results)}")
+        # Pad results and tokens_used_list if necessary
+        results += ["Error"] * (len(temp_df) - len(results))
+        tokens_used_list += [0] * (len(temp_df) - len(tokens_used_list))
+    temp_df['AI_Decision'] = results[:len(temp_df)]
+    temp_df['Tokens_Used'] = tokens_used_list[:len(temp_df)]
+    temp_df.to_parquet(f'pt2_intermediate_results_{num_processed}.parquet')
+    logging.info(f"Saved pt2 intermediate results for {num_processed} articles")
+
+
+
+# Function to plot progress
+def plot_progress(df):
+    plt.figure(figsize=(12, 6))
+    plt.plot(df['Tokens_Used'].cumsum())
+    plt.title('Cumulative Tokens Used')
+    plt.xlabel('Article Index')
+    plt.ylabel('Total Tokens')
+    plt.grid(True)
+    plt.show()
+
+    plt.figure(figsize=(12, 6))
+    df['AI_Decision'].value_counts().plot(kind='bar')
+    plt.title('Distribution of AI Decisions')
+    plt.xlabel('Decision')
+    plt.ylabel('Count')
+    plt.show()
+
+# Example usage
+# Assuming 'df' is your pandas DataFrame containing 'Title', 'Published Year', and 'Abstract' columns
+# If you're loading from a CSV file, you can use:
+# df = pd.read_csv('your_data.csv')
+
+df = process_all_articles(df)
+plot_progress(df)
+
+
+# In[65]:
+
+
+import anthropic
+import os
+import pandas as pd
+import time
+import matplotlib.pyplot as plt
+from tqdm import tqdm
+from functools import lru_cache
+import json
+
+# Set up the API key for Claude.AI
+os.environ['ANTHROPIC_API_KEY'] = anthropic_api_key
+
+# Initialize the Anthropic client
+client = anthropic.Anthropic()
+
+def process_article(title, year, abstract):
+    prompt = f"""You are assisting in screening articles for a scoping review on medical screening for Commercial Spaceflight (CSF). Your task is to determine whether to include, exclude, or mark as "maybe" each article based on the provided criteria. 
+
+Here are the key inclusion criteria:
+[... include your criteria here ...]
+
+Key exclusion criteria:
+[... include your exclusion criteria here ...]
+
+Please review the following article information:
+
+Title: {title}
+Year: {year}
+Abstract: {abstract}
+
+Based on this information, determine whether the article should be included, excluded, or marked as "maybe" for the scoping review. Consider the inclusion and exclusion criteria carefully.
+
+First, provide a brief justification for your decision, explaining how the article meets or fails to meet the criteria. Then, state your decision.
+
+Format your response as follows:
+<justification>
+[Your justification here]
+</justification>
+
+<decision>[INCLUDE/EXCLUDE/MAYBE]</decision>"""
+
+    message = client.messages.create(
+        model="claude-3-haiku-20240307",
+        max_tokens=3000,
+        temperature=0,
+        messages=[
+            {"role": "user", "content": prompt}
+        ]
+    )
+
+    return message.content
+
+def process_articles_batch(df, start_index, batch_size):
+    results = []
+    for i in range(start_index, min(start_index + batch_size, len(df))):
+        row = df.iloc[i]
+        try:
+            result = process_article(row['Title'], row['Published Year'], row['Abstract'])
+            results.append(result)
+            time.sleep(1)  # Add a small delay between API calls
+        except Exception as e:
+            print(f"Error processing article {i}: {e}")
+            results.append("Error: " + str(e))
+    return results
+
+def save_progress(df, results, filename):
+    temp_df = df.copy()
+    temp_df['AI_Decision'] = results + [''] * (len(df) - len(results))
+    temp_df.to_parquet(filename)
+
+def load_progress(filename):
+    if os.path.exists(filename):
+        return pd.read_parquet(filename)
+    return None
+
+def process_all_articles(df, batch_size=10, save_frequency=50):
+    output_file = 'processed_articles.parquet'
+
+    # Check if we have a saved progress
+    loaded_df = load_progress(output_file)
+    if loaded_df is not None:
+        start_index = loaded_df['AI_Decision'].last_valid_index() + 1
+        results = loaded_df['AI_Decision'].dropna().tolist()
+        print(f"Resuming from article {start_index}")
+    else:
+        start_index = 0
+        results = []
+
+    total_articles = len(df)
+    with tqdm(total=total_articles, initial=start_index) as pbar:
+        while start_index < total_articles:
+            batch_results = process_articles_batch(df, start_index, batch_size)
+            results.extend(batch_results)
+            start_index += len(batch_results)
+            pbar.update(len(batch_results))
+
+            if len(results) % save_frequency == 0 or start_index >= total_articles:
+                save_progress(df, results, output_file)
+                print(f"Progress saved. Processed {len(results)} out of {total_articles} articles.")
+
+    return load_progress(output_file)
+
+# Example usage
+# Assuming 'df' is your pandas DataFrame containing 'Title', 'Published Year', and 'Abstract' columns
+# If you're loading from a CSV file, you can use:
+# df = pd.read_csv('your_data.csv')
+
+processed_df = process_all_articles(df, batch_size=10, save_frequency=50)
+
+# After processing, you can analyze the results
+print(processed_df['AI_Decision'].value_counts())
+
+# You can also plot the progress if needed
+# plot_progress(processed_df)
+
+
+# In[ ]:
+
+
+
+
+
+# In[37]:
+
+
+print(df)
+
+
+# In[29]:
+
+
+df
+
+
+# In[21]:
+
+
+df
+
+
+# In[1]:
+
+
+import pandas as pd
+df = pd.read_parquet('intermediate_results_9850.parquet')
+
+
+# In[2]:
+
+
+df
+
+
+# In[ ]:
+
+
+
+
