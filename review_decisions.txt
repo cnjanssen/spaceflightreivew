@@ -1,0 +1,242 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[ ]:
+
+
+get_ipython().system("jupyter nbconvert --to script 'review_decisions.ipynb'")
+
+
+# In[1]:
+
+
+import pandas as pd
+import re
+from bs4 import BeautifulSoup
+import glob
+
+
+# In[2]:
+
+
+#df = pd.read_parquet('[Finished]claude_3_haiku_all_103554_articles.parquet')
+#df = pd.read_parquet('intermediate_results_10370.parquet')
+df = pd.read_parquet('Gemini_1.5_flash_prompt_v210350.parquet')
+# df_groq = pd.read_parquet('pt3_groq_intermediate_results_3000.parquet')
+# 
+# 
+# df_1_groq = pd.read_parquet('pt2_groq_intermediate_results_2000.parquet')
+# df_2_groq = pd.read_parquet('groq_pt1_intermediate_results.parquet')
+# df_3_groq = pd.read_parquet('pt4_groq_intermediate_results_2800.parquet')
+# df_4_groq = pd.read_parquet('pt5_groq_intermediate_results_1550.parquet')
+#df_1 = pd.read_parquet('claude_3_haiku_v2_pt35650.parquet')
+# df_2 = pd.read_parquet('claude_3_haiku_v2_progress.parquet')
+#df_3 = pd.read_parquet('claude_3_haiku_v2_pt3_2024.parquet')
+
+
+# In[3]:
+
+
+df['Tokens_Used'].sum()
+
+
+# In[4]:
+
+
+df_combined = pd.concat([df_groq, df_1_groq, df_2_groq, df_3_groq ,df_4_groq],join='outer')
+
+
+# In[6]:
+
+
+df.to_csv('Gemini_1.5_flash_v2_prompt_v2_ALL.csv')
+
+
+# In[18]:
+
+
+df_combined = df_combined.drop_duplicates()
+
+
+# In[19]:
+
+
+df_combined
+
+
+# In[20]:
+
+
+df_good = df_combined[~df_combined["AI_Decision"].str.contains("Error")]
+
+
+# In[21]:
+
+
+df_good
+
+
+# In[115]:
+
+
+df_good.to_parquet('claude_3_haiku_all_103554_articles.parquet')
+
+
+# In[22]:
+
+
+df_total =  pd.read_csv('all_abstracts_screen.csv')
+
+
+# In[23]:
+
+
+df_total
+
+
+# In[24]:
+
+
+df_pending = df_total[~df_total['Title'].isin(df_good['Title'])]
+
+
+# In[25]:
+
+
+df_pending.shape
+
+
+# In[26]:
+
+
+df_pending.to_parquet('groq_pending_abstracts_9_17_24_v2.parquet')
+
+
+# In[79]:
+
+
+df_pending.to_parquet('claude_3_haiku_v3_pending_abstracts_pt4.parquet')
+
+
+# In[8]:
+
+
+df_error = df[df['AI_Decision'].str.contains('Error')]
+
+
+# In[10]:
+
+
+df_error.to_parquet('pending_abstracts.parquet')
+
+
+# In[2]:
+
+
+df_cleaned = df.unique()
+
+
+# In[9]:
+
+
+df = pd.read_parquet('intermediate_results_10.parquet')
+
+
+# In[26]:
+
+
+df
+
+
+# In[7]:
+
+
+#For CLAUDE
+def parse_textblock(df):
+    def extract_content(text):
+        # Extract the content inside TextBlock
+        match = re.search(r'TextBlock\(text=[\'"](.*?)[\'"]', text, re.DOTALL)
+        if match:
+            content = match.group(1)
+            # Use BeautifulSoup to parse the content
+            soup = BeautifulSoup(content, 'html.parser')
+            justification = soup.find('justification')
+            decision = soup.find('decision')
+
+            return (justification.text.strip() if justification else "",
+                    decision.text.strip() if decision else "")
+        return "", ""
+
+    # Apply the extraction function to the AI_Decision column
+    df[['justification', 'decision']] = df['AI_Decision'].apply(extract_content).apply(pd.Series)
+
+    return df
+
+
+# In[11]:
+
+
+#For GEMINI
+import pandas as pd
+from bs4 import BeautifulSoup
+
+def parse_ai_decisions(df):
+    decisions = []
+    justifications = []
+    tags = []
+
+    for decision_text in df['AI_Decision']:
+        soup = BeautifulSoup(decision_text, 'html.parser')
+
+        justification_tag = soup.find('justification')
+        decision_tag = soup.find('decision')
+        tag_tag = soup.find('tag')
+
+        justification = justification_tag.get_text(strip=True) if justification_tag else ''
+        decision = decision_tag.get_text(strip=True) if decision_tag else ''
+        tag = tag_tag.get_text(strip=True) if tag_tag else ''
+
+        justifications.append(justification)
+        decisions.append(decision)
+        tags.append(tag)
+
+    df['Justification'] = justifications
+    df['Decision'] = decisions
+    df['Tag'] = tags
+
+    return df
+
+# Example usage:
+df = parse_ai_decisions(df)
+print(df[['Decision', 'Justification']])
+
+
+# In[12]:
+
+
+df
+
+
+# In[33]:
+
+
+df['Tokens_Used'].hist()
+
+
+# In[34]:
+
+
+df['Tokens_Used'].sum()
+
+
+# In[31]:
+
+
+df.to_excel('gemini_decisions_v1.xlsx')
+
+
+# In[ ]:
+
+
+
+
